@@ -32,6 +32,13 @@
   color: #FAFAFA;
   text-decoration: none;
 }
+
+.logout{
+  font-size: 20px;
+  color: #FAFAFA;
+  text-decoration: none;
+}
+
 .wrapper {
   display: flex;
 }

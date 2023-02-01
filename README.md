@@ -28,7 +28,7 @@ https://docs.google.com/spreadsheets/d/1ryNzlwm_fK5bVfAaikfKuEm-cwkzh3NQFum5tmdj
 
 - has_many :students
 
-## titles テーブル
+## students テーブル
 
 | Column   | Type       | Options                        |
 | -------- | ---------- | ------------------------------ |
@@ -72,4 +72,4 @@ https://docs.google.com/spreadsheets/d/1ryNzlwm_fK5bVfAaikfKuEm-cwkzh3NQFum5tmdj
 - belongs_to :student
 
 # データベース設計
-[![Image from Gyazo](https://i.gyazo.com/ce348e1509728285d94556b3a40d186c.png)](https://gyazo.com/ce348e1509728285d94556b3a40d186c)
+[![Image from Gyazo](https://i.gyazo.com/b667c657ef7cc4b8adf8a98830245863.png)](https://gyazo.com/b667c657ef7cc4b8adf8a98830245863)
