@@ -1,0 +1,47 @@
+<div class="students-contents">
+  <header class="students-header">
+    <%= render "shared/header"%>
+  </header>
+  <div class="students-main">
+    <h2 class="students-title">報告書のタイトルを入力</h2>
+    <%= form_with(model: @student, local: true) do |f| %>
+
+    <%= render 'shared/error_messages', model: f.object %>
+
+    <%# 生徒名 %>
+    <div class="new-students">
+      <div class="weight-bold-text">
+        生徒名
+        <span class="indispensable">必須</span>
+      </div>
+      <%= f.text_field :student, class:"students-text", id:"student-name", placeholder:"生徒名（必須 40文字まで)", maxlength:"40" %>
+    </div>
+    <%# /生徒名 %>
+
+    <%# 報告書の詳細 %>
+    <div class="students-detail">
+      <div class="weight-bold-text">報告書の詳細</div>
+      <div class="form">
+        <div class="weight-bold-text">
+          学年
+          <span class="indispensable">必須</span>
+        </div>
+        <%= f.collection_select(:grade_id, Grade.all, :id, :name, {}, {class:"select-box", id:"student-category"}) %>
+        <div class="weight-bold-text">
+          指導した月
+          <span class="indispensable">必須</span>
+        </div>
+        <%= f.collection_select(:month_id, Month.all, :id, :name, {}, {class:"select-box", id:"student-sales-status"}) %>
+      </div>
+    </div>
+    <%# /報告書の詳細 %>
+
+    <%# 下部ボタン %>
+    <div class=addition-btn-contents">
+      <%= f.submit "追加する" ,class:"addition-btn" %>
+      <%=link_to 'もどる', root_path, class:"back-btn" %>
+    </div>
+    <%# /下部ボタン %>
+  </div>
+  <% end %>
+</div>

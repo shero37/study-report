@@ -1,5 +1,6 @@
 <header class="top-page-header">
-    <a class="title-name" href="/">STUDY REPORT</a>
+  <%= link_to 'STUDY REPORT', root_path, class: "title-name" %>
+    <%# <a class="title-name" href="/">STUDY REPORT</a> %>
     <ul class="lists">
       <% if user_signed_in? %>
         <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %></li>
