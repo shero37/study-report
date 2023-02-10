@@ -1,6 +1,6 @@
 class StudentsController < ApplicationController
   def index
-    @student = Student.order("created_at DESC")
+    @students = Student.order("created_at DESC")
   end
 
   def new
