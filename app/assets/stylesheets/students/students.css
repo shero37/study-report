@@ -88,3 +88,12 @@
   padding: 46px 40px 0;
   overflow: scroll;
 }
+
+.title-content {
+  font-size: 20px;
+  color: black;
+  text-decoration: none;
+  background-color: #FAFAFA;
+  padding: 10px 10px;
+  border-radius: 5px;
+}
