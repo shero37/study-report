@@ -1,0 +1,112 @@
+/* 生徒の概要 */
+
+.student-show {
+  background-color: #f8f8f8;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5vh 0;
+}
+
+.student-box {
+  background-color: #AED598;
+  width: 70vw;
+  min-width: 1200px;
+  padding: 5vh 10vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.student-box>.name {
+  text-align: center;
+  font-weight: bold;
+  font-size: 25px;
+}
+
+.detail-table {
+  width: 100%;
+}
+
+.detail-student {
+  width: 20%;
+  background-color: #eee;
+  border: 1px solid #2B4055;
+  font-size: 14px;
+  text-align: center;
+}
+
+.detail-value {
+  width: 80%;
+  padding: 10px;
+  border: 1px solid #2B4055;
+  font-size: 14px;
+  background-color: #f5f5f5;
+}
+/* /生徒の概要 */
+
+/* 報告書の内容 */
+.report-box{
+  background-color: #AED598;
+  width: 70vw;
+  min-width: 1200px;
+  padding: 5vh 10vw 30vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.report-btn {
+  padding: 10px 10px;
+  margin-right: 85%;
+  margin-bottom: 10px;
+}
+
+.report-btn a {
+  font-size: 18px;
+  color: #803378;
+  text-decoration: none;
+  border: 1px solid darkred;
+  padding: 10px 10px;
+  font-family: monospace;
+  border-radius: 5px;
+  background-color: #E7DEC0;
+}
+
+.detail-table{
+  border-collapse:  collapse;
+}
+
+.report-item {
+  width: 10%;
+  background-color: #eee;
+  border: 1px solid #2B4055;
+  font-size: 14px;
+  text-align: center;
+}
+
+.report-guidance {
+  width: 70%;
+  background-color: #eee;
+  border: 1px solid #2B4055;
+  font-size: 14px;
+  text-align: center;
+}
+
+.detail-report {
+  width: 10%;
+  padding: 20px;
+  border: 1px solid #2B4055;
+  font-size: 14px;
+  background-color: #f5f5f5;
+}
+
+.detail-guidance {
+  width: 70%;
+  padding: 10px;
+  border: 1px solid #2B4055;
+  font-size: 14px;
+  background-color: #f5f5f5;
+}
+/* 報告書の内容 */

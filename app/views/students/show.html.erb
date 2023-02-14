@@ -1,0 +1,83 @@
+<%= render "shared/header" %>
+
+<%# 生徒の概要 %>
+<div class="student-show">
+  <div class="student-box">
+    <h2 class="name">
+      <%= @student.student %>/<%= @student.month.name %>月
+    </h2>
+<<<<<<< Updated upstream
+
+=======
+    
+>>>>>>> Stashed changes
+    <table class="detail-table">
+      <tbody>
+        <tr>
+          <th class="detail-student">生徒名</th>
+          <td class="detail-value"><%= @student.student %></td>
+        </tr>
+        <tr>
+          <th class="detail-student">学年</th>
+          <td class="detail-value"><%= @student.grade.name %></td>
+        </tr>
+        <tr>
+          <th class="detail-student">指導した月</th>
+          <td class="detail-value"><%= @student.month.name %>月</td>
+        </tr>
+        <tr>
+<<<<<<< Updated upstream
+          <th class="detail-student">教師名</th>
+=======
+          <th class="detail-student">担当教師</th>
+>>>>>>> Stashed changes
+          <td class="detail-value"><%= @student.user.name %></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <%# /生徒の概要 %>
+<<<<<<< Updated upstream
+
+  <%# 報告書の概要 %>
+    <div class="report-box">
+      <div class="report-btn">
+        <%= link_to '指導の報告', "#" %>
+      </div>
+      <table class="detail-table">
+        <thead>
+          <tr>
+            <th class="report-item">実施日</th>
+            <th class="report-item">時間</th>
+            <th class="report-item">交通費</th>
+            <th class="report-guidance">指導の内容</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="detail-report">2/13</td>
+            <td class="detail-report">2.0</td>
+            <td class="detail-report">280</td>
+            <td class="detail-guidance">英語は単語テスト、数学は練習問題、その他は小テストを行いました。
+            英語は単語テスト、数学は練習問題、その他は小テストを行いました。英語は単語テスト、数学は練習問題、
+            その他は小テストを行いました。英語は単語テスト、数学は練習問題、その他は小テストを行いました。</td>
+          </tr>
+          <tr>
+            <td class="detail-report">2/20</td>
+            <td class="detail-report">2.0</td>
+            <td class="detail-report">280</td>
+            <td class="detail-guidance">英語は単語テスト、数学は練習問題、その他は小テストを行いました。
+            英語は単語テスト、数学は練習問題、その他は小テストを行いました。英語は単語テスト、数学は練習問題、
+            その他は小テストを行いました。英語は単語テスト、数学は練習問題、その他は小テストを行いました。</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  <%# /報告書の概要 %>
+
+
+</div>
+  
+=======
+</div>
+>>>>>>> Stashed changes

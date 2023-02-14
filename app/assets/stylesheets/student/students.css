@@ -73,6 +73,7 @@
 .title-name-create {
   background-color: #1A545A;
   padding: 10px 10px;
+  margin-top: 5px;
 }
 
 .title-name-create a {
@@ -81,6 +82,8 @@
   text-decoration: none;
   border: 1px solid darkred;
   padding: 10px 10px;
+  font-family: monospace;
+  border-radius: 5px;
 }
 .report-title {
   background-color: #1A545A;
