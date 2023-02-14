@@ -15,6 +15,14 @@ class StudentsController < ApplicationController
       render :new
     end
   end
+<<<<<<< Updated upstream
+  
+=======
+
+>>>>>>> Stashed changes
+  def show
+    @student = Student.find(params[:id])
+  end
 
   private
 
