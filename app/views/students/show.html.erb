@@ -34,8 +34,9 @@
   <%# 報告書の概要 %>
     <div class="report-box">
       <div class="report-btn">
-        <%= link_to '指導の報告', "#" %>
+        <%= link_to '指導の報告', student_reports_path(@student.id) %>
       </div>
+      <% @reports.each do |report| %>
       <table class="detail-table">
         <thead>
           <tr>
@@ -47,26 +48,42 @@
         </thead>
         <tbody>
           <tr>
-            <td class="detail-report">2/13</td>
-            <td class="detail-report">2.0</td>
-            <td class="detail-report">280</td>
-            <td class="detail-guidance">英語は単語テスト、数学は練習問題、その他は小テストを行いました。
-            英語は単語テスト、数学は練習問題、その他は小テストを行いました。英語は単語テスト、数学は練習問題、
-            その他は小テストを行いました。英語は単語テスト、数学は練習問題、その他は小テストを行いました。</td>
+            <td class="detail-report"><%= report.month.name %>/<%= report.day.name %></td>
+            <td class="detail-report"><%= report.hour %>h</td>
+            <td class="detail-report"><%= report.transportation_expense %>円</td>
+            <td class="detail-guidance"><%= report.content %></td>
           </tr>
-          <tr>
+          
+        </tbody>
+      </table>
+      <% end %>
+    </div>
+  <%# /報告書の概要 %>
+
+</div>
+
+
+
+<%# <ul class='item-lists'>
+    <% @items.each do |item| %>
+      <%# <li class='list'>
+        
+      </li>
+    <% end %>
+
+    <%# <% if @items.empty? %>
+      <%# <li class='list'>
+        <%= link_to '#' do %>
+        <%# <% end %>
+      <%# </li>
+    <% end %>
+    <%# </ul> %>
+
+    <%# <tr>
             <td class="detail-report">2/20</td>
             <td class="detail-report">2.0</td>
             <td class="detail-report">280</td>
             <td class="detail-guidance">英語は単語テスト、数学は練習問題、その他は小テストを行いました。
             英語は単語テスト、数学は練習問題、その他は小テストを行いました。英語は単語テスト、数学は練習問題、
             その他は小テストを行いました。英語は単語テスト、数学は練習問題、その他は小テストを行いました。</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  <%# /報告書の概要 %>
-
-
-</div>
-
+          </tr> %>
