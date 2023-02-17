@@ -1,3 +1,5 @@
-<%= link_to student_path(title.id), class: 'title-content' do %>
-  <%= title.student %>　<%= title.grade.name %>　<%= title.month.name %>月
-<% end %>
+<div class = title-box>
+  <%= link_to student_path(title.id), class: 'title-content' do %>
+    <%= title.student %>　<%= title.grade.name %>　<%= title.month.name %>月
+  <% end %>
+</div>

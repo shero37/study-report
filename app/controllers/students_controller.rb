@@ -1,6 +1,6 @@
 class StudentsController < ApplicationController
   def index
-    @students = Student.order("created_at DESC")
+    @students = Student.where(user_id: current_user.id).includes(:user).order("created_at DESC")
   end
 
   def new
@@ -18,7 +18,7 @@ class StudentsController < ApplicationController
 
   def show
     @student = Student.find(params[:id])
-    @reports = Report.all
+    @reports = @student.reports
   end
 
   private

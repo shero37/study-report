@@ -85,11 +85,15 @@
   font-family: monospace;
   border-radius: 5px;
 }
-.report-title {
+.report-titles {
   background-color: #1A545A;
   height: calc(100vh - 40px);
   padding: 46px 40px 0;
   overflow: scroll;
+}
+
+.title-box {
+  margin-bottom: 30px;
 }
 
 .title-content {
