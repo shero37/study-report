@@ -1,4 +1,6 @@
 class StudentsController < ApplicationController
+  before_action :authenticate_user!, only: [:new, :create]
+  
   def index
     @students = Student.where(user_id: current_user.id).includes(:user).order("created_at DESC")
   end
