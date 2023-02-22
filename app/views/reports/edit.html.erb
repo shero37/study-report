@@ -3,7 +3,7 @@
     <%= render "shared/header"%>
   </header>
   <div class="students-main">
-    <h2 class="students-title"><%= @student.student %>　報告書の入力</h2>
+    <h2 class="students-title"><%= @student.student %>　報告書の修正</h2>
     <%= form_with model: [@student, @report], local: true do |f| %>
 
     <%= render 'shared/error_messages', model: f.object %>
@@ -47,7 +47,7 @@
 
     <%# 下部ボタン %>
     <div class="addition-btn-contents">
-      <%= f.submit "報告を作成する" ,class:"addition-btn" %>
+      <%= f.submit "報告を修正する" ,class:"addition-btn" %>
       <%=link_to 'もどる', student_path(@student.id), class:"back-btn" %>
     </div>
     <%# /下部ボタン %>

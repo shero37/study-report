@@ -40,6 +40,7 @@
       <table class="detail-table">
         <thead>
           <tr>
+            <th class="report-number"></th>
             <th class="report-item">実施日</th>
             <th class="report-item">時間</th>
             <th class="report-item">交通費</th>
@@ -49,21 +50,38 @@
         <tbody>
           <% if @reports.empty? %>
             <tr>
+              <td class="detail-number">1</td>
               <td class="detail-report">(例)_/__</td>
               <td class="detail-report">(例)_._h</td>
-              <td class="detail-report">例)__円</td>
+              <td class="detail-report">(例)__円</td>
               <td class="detail-guidance">(例)  英語は単語テスト、数学は練習問題、その他は小テストを行いました。
               英語は単語テスト、数学は練習問題、その他は小テストを行いました。英語は単語テスト、数学は練習問題、
               その他は小テストを行いました。</td>
             </tr>
           <% else %>
+            <%i = 1%>
             <% @reports.each do |report| %>
-            <tr>
-              <td class="detail-report"><%= report.month.name %>/<%= report.day.name %></td>
-              <td class="detail-report"><%= report.hour %>h</td>
-              <td class="detail-report"><%= report.transportation_expense %>円</td>
-              <td class="detail-guidance"><%= report.content %></td>
-            </tr>
+              <tr>
+                <td class="detail-number"><%= i %><br>
+                  <div class="menu">
+                    <span><%= image_tag 'arrow_top.png' %>
+                      <ul class="menu-list">
+                        <li>
+                          <%= link_to '編集', edit_student_report_path(@student.id, report.id), method: :get %>
+                        </li>
+                        <li>
+                          <%= link_to '削除', student_report_path(@student.id, report.id), method: :delete %>
+                        </li>
+                      </ul>
+                    </span>
+                  </div>
+                </td>
+                <td class="detail-report"><%= report.month.name %>/<%= report.day.name %></td>
+                <td class="detail-report"><%= report.hour %>h</td>
+                <td class="detail-report"><%= report.transportation_expense %>円</td>
+                <td class="detail-guidance"><%= report.content %></td>
+              </tr>
+              <%i += 1%>
             <% end %>
           <% end %>
         </tbody>
