@@ -20,7 +20,7 @@ class StudentsController < ApplicationController
 
   def show
     @student = Student.find(params[:id])
-    @reports = @student.reports
+    @reports = @student.reports.order(month_id: :asc, day_id: :asc)
   end
 
   private
