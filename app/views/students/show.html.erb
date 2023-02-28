@@ -63,18 +63,20 @@
             <% @reports.each do |report| %>
               <tr>
                 <td class="detail-number"><%= i %><br>
-                  <div class="menu">
-                    <span><%= image_tag 'arrow_top.png' %>
-                      <ul class="menu-list">
-                        <li>
-                          <%= link_to '編集', edit_student_report_path(@student.id, report.id), method: :get %>
-                        </li>
-                        <li>
-                          <%= link_to '削除', student_report_path(@student.id, report.id), method: :delete %>
-                        </li>
-                      </ul>
-                    </span>
-                  </div>
+                  <% if user_signed_in? && current_user.id == @student.user_id %>
+                    <div class="menu">
+                      <span><%= image_tag 'arrow_top.png' %>
+                        <ul class="menu-list">
+                          <li>
+                            <%= link_to '編集', edit_student_report_path(@student.id, report.id), method: :get %>
+                          </li>
+                          <li>
+                            <%= link_to '削除', student_report_path(@student.id, report.id), method: :delete %>
+                          </li>
+                        </ul>
+                      </span>
+                    </div>
+                  <% end %>
                 </td>
                 <td class="detail-report"><%= report.month.name %>/<%= report.day.name %></td>
                 <td class="detail-report"><%= report.hour %>h</td>
