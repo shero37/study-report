@@ -33,8 +33,11 @@
 
   <%# 報告書の概要 %>
     <div class="report-box">
+    <div class="report-top">
       <div class="report-btn">
         <%= link_to '指導の報告', new_student_report_path(@student.id) %>
+      </div>
+      <div class="report-explanation">報告書番号の下の<span><%= image_tag 'arrow_top.png' %></span>にカーソルを合わせると編集・削除ボタンが出てきます。</div>
       </div>
       
       <table class="detail-table">
