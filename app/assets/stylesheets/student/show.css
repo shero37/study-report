@@ -31,7 +31,7 @@
 
 .detail-student {
   width: 20%;
-  background-color: #eee;
+  background-color: #D6D9E7;
   border: 1px solid #2B4055;
   font-size: 14px;
   text-align: center;
@@ -54,12 +54,15 @@
   padding: 5vh 10vw 30vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
+}
+
+.report-top {
+  display: flex;
 }
 
 .report-btn {
   padding: 10px 10px;
-  margin-right: 85%;
+  margin-right: 10px;
   margin-bottom: 10px;
 }
 
@@ -74,13 +77,31 @@
   background-color: #E7DEC0;
 }
 
+.report-explanation {
+  padding: 10px 0px;
+  margin-bottom: 10px;
+}
+
+.report-explanation span {
+  background-color: #803378;
+  padding: 0px 10px;
+}
+
 .detail-table{
   border-collapse:  collapse;
 }
 
+.report-number {
+  width: 6%;
+  background-color: #D6D9E7;
+  border: 1px solid #2B4055;
+  font-size: 14px;
+  text-align: center;
+}
+
 .report-item {
-  width: 10%;
-  background-color: #eee;
+  width: 8%;
+  background-color: #D6D9E7;
   border: 1px solid #2B4055;
   font-size: 14px;
   text-align: center;
@@ -88,15 +109,51 @@
 
 .report-guidance {
   width: 70%;
-  background-color: #eee;
+  background-color: #D6D9E7;
   border: 1px solid #2B4055;
   font-size: 14px;
   text-align: center;
 }
 
+.detail-number {
+  width: 6%;
+  padding: 8px;
+  border: 1px solid #2B4055;
+  font-size: 14px;
+  background-color: #f5f5f5;
+  text-align: center;
+}
+
+.menu span {
+  position: relative;
+  background-color: #803378;
+  padding: 0px 10px;
+}
+
+.menu span:hover > .menu-list {
+  display: block;
+}
+
+.menu .menu-list {
+  display: none;
+  position: absolute;
+  top: 0px;
+  width: 100px;
+  background-color: #D6D9E7;
+  list-style: none;
+  border: 1px solid #803378;
+}
+
+.menu-list li a {
+  text-align: center;
+text-decoration: none;
+color: #803378;
+  font-family: monospace;
+  margin-right: 20px;
+}
 .detail-report {
-  width: 10%;
-  padding: 20px;
+  width: 8%;
+  padding: 8px;
   border: 1px solid #2B4055;
   font-size: 14px;
   background-color: #f5f5f5;
@@ -104,7 +161,7 @@
 
 .detail-guidance {
   width: 70%;
-  padding: 10px;
+  padding: 8px;
   border: 1px solid #2B4055;
   font-size: 14px;
   background-color: #f5f5f5;

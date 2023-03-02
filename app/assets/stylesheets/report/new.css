@@ -1,0 +1,36 @@
+.guidance-date{
+  width: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.date-month{
+  width: 40%;
+  display: flex;
+  align-items: center;
+}
+
+.date-day{
+  width: 40%;
+  display: flex;
+  align-items: center;
+}
+
+.guidance-hour {
+  height: 30px;
+  width: 100%;
+  margin: 2vh 0;
+}
+
+.transportation-expense {
+  height: 30px;
+  width: 100%;
+  margin: 2vh 0;
+}
+
+.guidance-content {
+  height: 100px;
+  width: 100%;
+  margin: 2vh 0;
+}

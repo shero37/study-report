@@ -15,7 +15,7 @@ class Month < ActiveHash::Base
     { id: 12, name: '12' }
   ]
  
-   include ActiveHash::Associations
-   has_many :students
- 
+  include ActiveHash::Associations
+  has_many :students
+  has_many :reports
   end

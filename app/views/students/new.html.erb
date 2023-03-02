@@ -26,12 +26,12 @@
           学年
           <span class="indispensable">必須</span>
         </div>
-        <%= f.collection_select(:grade_id, Grade.all, :id, :name, {}, {class:"select-box", id:"student-category"}) %>
+        <%= f.collection_select(:grade_id, Grade.all, :id, :name, {}, {class:"select-box", id:"student-grade"}) %>
         <div class="weight-bold-text">
           指導した月
           <span class="indispensable">必須</span>
         </div>
-        <%= f.collection_select(:month_id, Month.all, :id, :name, {}, {class:"select-box", id:"student-sales-status"}) %>
+        <%= f.collection_select(:month_id, Month.all, :id, :name, {}, {class:"select-box", id:"student-month"}) %>
       </div>
     </div>
     <%# /報告書の詳細 %>

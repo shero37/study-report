@@ -1,0 +1,56 @@
+<div class="students-contents">
+  <header class="students-header">
+    <%= render "shared/header"%>
+  </header>
+  <div class="students-main">
+    <h2 class="students-title"><%= @student.student %>　報告書の修正</h2>
+    <%= form_with model: [@student, @report], local: true do |f| %>
+
+    <%= render 'shared/error_messages', model: f.object %>
+
+    <%# 報告書の詳細 %>
+    <div class="students-detail">
+      <h3 class="weight-bold-text">報告書の詳細</h3>
+      <div class="form">   
+        <div class="weight-bold-text">
+          指導した日付
+          <span class="indispensable">必須</span>
+        </div>
+        <div class="guidance-date"> 
+          <div class="date-month">
+            <%= f.collection_select(:month_id, Month.all, :id, :name, {}, {class:"select-box", id:"student-month"}) %>
+            <div>月</div>
+          </div>
+          <div class="date-day">
+            <%= f.collection_select(:day_id, Day.all, :id, :name, {}, {class:"select-box", id:"student-day"}) %>
+            <div>日</div>
+          </div>
+        </div>
+        <div class="weight-bold-text">
+          指導時間
+          <span class="indispensable">必須</span>
+        </div>
+        <%= f.text_field :hour, class:"guidance-hour", id:"student-hour", placeholder:"例）1.5" %>
+        <div class="weight-bold-text">
+          交通費
+          <span class="indispensable">必須</span>
+        </div>
+        <%= f.text_field :transportation_expense, class:"transportation-expense", id:"student-transportation-expense", placeholder:"例 280" %>
+        <div class="weight-bold-text">
+          指導の内容
+          <span class="indispensable">必須</span>
+        </div>
+        <%= f.text_area :content, class:"guidance-content", id:"student-content", placeholder:"指導の内容", rows:"5", maxlength:"1000" %>
+      </div>
+    </div>
+    <%# /報告書の詳細 %>
+
+    <%# 下部ボタン %>
+    <div class="addition-btn-contents">
+      <%= f.submit "報告を修正する" ,class:"addition-btn" %>
+      <%=link_to 'もどる', student_path(@student.id), class:"back-btn" %>
+    </div>
+    <%# /下部ボタン %>
+  </div>
+  <% end %>
+</div>

@@ -1,5 +1,6 @@
 class Student < ApplicationRecord
   belongs_to :user
+  has_many :reports
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :grade
   belongs_to :month

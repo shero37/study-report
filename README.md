@@ -49,8 +49,8 @@ https://docs.google.com/spreadsheets/d/1ryNzlwm_fK5bVfAaikfKuEm-cwkzh3NQFum5tmdj
 | ---------------------- | ---------- | ------------------------------ |
 | month_id               | integer    | null: false                    |
 | day_id                 | integer    | null: false                    |
-| hour                   | integer    | null: false                    |
-| transportation_expense | integer    |                    |
+| hour                   | decimal    | null: false                    |
+| transportation_expense | integer    |                                |
 | content                | text       | null: false                    |
 | student                | references | null: false, foreign_key: true |
 
