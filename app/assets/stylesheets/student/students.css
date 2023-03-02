@@ -60,7 +60,9 @@
   padding: 20px 0 40px;
 }
 
-.room-name a {
+.teacher-name a {
+  font-size: 25px;
+  
   text-decoration: none;
   color: #253141;
 }
