@@ -1,0 +1,2 @@
+class GuidanceFee < ApplicationRecord
+end
