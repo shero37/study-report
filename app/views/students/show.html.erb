@@ -63,6 +63,8 @@
             </tr>
           <% else %>
             <%i = 1%>
+            <%time_total = 0%>
+            <%transportation_total = 0%>
             <% @reports.each do |report| %>
               <tr>
                 <td class="detail-number"><%= i %><br>
@@ -87,6 +89,8 @@
                 <td class="detail-guidance"><%= report.content %></td>
               </tr>
               <%i += 1%>
+              <%time_total += report.hour%>
+              <%transportation_total += report.transportation_expense%>
             <% end %>
           <% end %>
         </tbody>
@@ -94,4 +98,37 @@
     </div>
   <%# /報告書の概要 %>
 
+    <%# 指導料の概要 %>
+    <div class="fee-box">
+      <div class="guidance-fee-box">
+        <div class="weight-bold-text">
+          <span>今月の指導料</span>
+          
+        </div>
+        <div>
+          <div class="fee-content">
+            <div class="fee-text">
+              <span>時給2000
+              <%# <%= f.text_field :price, class:"price-input", id:"item-price", placeholder:"例）300" %>
+              円 × 合計指導時間<%=time_total%>h = 指導料合計12000円</span>
+            </div>
+            <%# <span class="sell-yen">¥</span> %>
+            
+          </div>
+          <div class="fee-content">
+            <span>往復交通費280円 × 指導回数 <%=i-1%> 回 = 交通費合計<%=transportation_total%></span>
+            <span>
+              <span id='transportation-total'></span>円
+            </span>
+          </div>
+          <div class="fee-content">
+            <span>総計</span>
+            <span>
+              <span id='total'></span>円
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <%# /指導料の概要 %>
 </div>

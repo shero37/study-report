@@ -51,7 +51,7 @@
   background-color: #AED598;
   width: 70vw;
   min-width: 1200px;
-  padding: 5vh 10vw 30vh;
+  padding: 5vh 10vw 20vh;
   display: flex;
   flex-direction: column;
 }
@@ -146,8 +146,8 @@
 
 .menu-list li a {
   text-align: center;
-text-decoration: none;
-color: #803378;
+  text-decoration: none;
+  color: #803378;
   font-family: monospace;
   margin-right: 20px;
 }
@@ -167,3 +167,45 @@ color: #803378;
   background-color: #f5f5f5;
 }
 /* 報告書の内容 */
+
+/* 指導料の概要 */
+.fee-box {
+  background-color: #AED598;
+  width: 70vw;
+  min-width: 1200px;
+  padding: 0px 10vw 30vh;
+  display: flex;
+}
+
+.guidance-fee-box {
+  border: 1px solid #2B4055;
+  background-color: #f5f5f5;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.fee-content {
+  width: 450px;
+  border-bottom: 1px solid #ccc;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.fee-text {
+  /* min-width: 170px; */
+  display: flex;
+  align-items: center;
+}
+
+.sell-yen {
+  font-size: 18px;
+}
+
+.price-input {
+  height: 30px;
+  text-align: right;
+  padding-right: 10px;
+}
+/* /指導料の概要 */
